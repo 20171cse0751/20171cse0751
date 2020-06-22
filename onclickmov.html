@@ -1,0 +1,54 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+function scroll(val)
+{
+    //alert(document.getElementById(val));
+    document.getElementById(val).click()
+}
+
+</script>
+</head>
+<body>
+<div id="div1" style="height:200px">
+The content of your div1 here.
+</div>
+
+<div id="div2" style="height:200px">
+The content of your div2 here.
+</div>
+
+<div id="div3" style="height:200px">
+The content of your div3 here.
+</div>
+
+<div id="div4" style="height:200px">
+The content of your div4 here.
+</div>
+
+<div id="div5" style="height:200px">
+The content of your div5 here.
+</div>
+
+<div style="display:none;">
+<a href="#div1" id="id1">Link Text Here</a>
+<a href="#div2" id="id2">Link Text Here</a>
+<a href="#div3" id="id3">Link Text Here</a>
+<a href="#div4" id="id4">Link Text Here</a>
+<a href="#div5" id="id5">Link Text Here</a>
+</div>
+
+
+<input type="button" onclick="scroll('id1')" value="button1"></input>
+<input type="button" onclick="scroll('id2')" value="button2"></input>
+<input type="button" onclick="scroll('id3')" value="button3"></input>
+<input type="button" onclick="scroll('id4')" value="button4"></input>
+<input type="button" onclick="scroll('id5')" value="button5"></input>
+
+
+</body>
+</html>

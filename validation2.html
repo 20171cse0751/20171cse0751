@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASSIGNMENT 9</title>
+<script type="text/javascript">
+
+function validate()
+{
+
+var name = document.getElementById('Name').value;
+var alpha = /^[a-zA-Z]+$/ ;
+
+var age = document.getElementById("Age").value;
+var num = /^[0-9]+$/;
+
+var gender= document.getElementsByName("Gender");
+
+if (name == "")
+{
+alert("Name cannot be empty");
+Name.focus();
+return false;
+}
+
+else
+if (name.length <= 5 )
+{
+alert("Name length should be greater than 5");
+Name.focus();
+return false;
+}
+
+else
+if (!name.match(alpha))
+{
+alert("Name cannot contain numbers");
+Name.focus();
+return false;
+}
+
+else
+if(age == "")
+{
+alert("Age cannot be empty");
+Age.focus();
+return false;
+}
+
+else
+if (age<15 || age>120)
+{
+alert("Age cannot be less than 15 or greater than 120");
+Age.focus();
+return false;
+}
+
+else
+if(!age.match(num))
+{
+alert("Age cannot be a alphabet");
+Age.focus();
+return false;
+}
+
+else
+if ((gender[0].checked == false) && (gender[1].checked == false))
+{
+alert("Gender cannot be empty");
+return false;
+}
+
+
+alert("REGISTRATION SUCCESSFUL!!");
+return true;
+
+
+}
+
+
+</script>
+
+<style type="text/css">
+.container
+{
+padding:3% 8% 6% 8%;
+background-color: #0f0f0f;
+margin-left: 30%;
+margin-right: 30%;
+margin-top: 6%
+
+}
+
+body
+{
+background-color: #020001;
+color:#00ccff;
+font-variant: small-caps;
+}
+
+input
+{
+background-color: #0f0f0f;
+padding: 10px 25px;
+border-color: #00ccff;
+color: white;
+}
+
+
+.cyanide
+{
+font-size: 25px;
+}
+
+.submit
+{
+padding: 10px 60px 10px 60px;
+font-size: 16px;
+margin-left: 16%;
+}
+
+.submit:hover
+{
+background-color: #00ccff;
+color: black;
+transition: .6s;
+border-color: black;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h1 align="center">SIGN UP<br><br></h1>
+<div align="center">
+
+<form class="cyanide" name="getdetails" onsubmit="return validate()">
+Name : &nbsp;<input type="text" id="Name" placeholder="chethan"><br><br>
+
+age &nbsp;&nbsp;&nbsp;:&nbsp<input type="text" id="Age" placeholder="18"><br><br>
+
+Gender &nbsp;:<span style="padding-right: 30px"></span> <input type="radio" name="Gender" value="male">Male &nbsp;&nbsp; <input type="radio" name="Gender" value="female">Female <br> <br> <br>
+
+<input  type="submit" name="submit" value="submit">
+
+</form>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function getValue2(){
+var arr=[];
+for(var i=0;i<3;i++)
+{
+var retval=prompt("enter the input:", "enter");
+arr[i]=retval;
+}
+arr.sort();
+document.write("you have entered:"+arr[2]);
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="click me2" onclick="getValue2();" />
+</form>
+</body>
+</html> 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function validatee()
+{
+var name = document.getElementById("Name").value;
+var alphabets = /^[a-zA-Z]+$/;
+var num = /^[0-9]+$/;
+var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var email= document.getElementById('Email').value;
+var age= document.getElementById('Age').value;
+var gender= document.getElementById('Genger').value;
+var phno= document.getElementById('Phone no').value;
+var address= document.getElementById('Address').value;
+if(name=="")
+{
+alert("name cannot be empty");
+return false;
+}
+elseif(name.length<= 5)
+{
+alert("name should be more than 5 charecters");
+return false;
+}
+elseif(!name.match(alphabets))
+{
+alert("name cannot be numbers");
+return false;
+}
+else
+if(email=="")
+{
+alert("email cannot be empty");
+return false;
+}
+
+else
+if(!email.match("mail"))
+{
+alert("invalied address");
+return false;
+}
+
+alert("REGISTRATION SUCCESSFUL!!");
+return true;
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h1 align="center">PERSANAL DETAILS<br><br></h1>
+<div align="center">
+<form  name="getdetails" onsubmit="return validatee()">
+Name :&nbsp;<input type="text" id="Name" placeholder="praveen vamsi"><br><br>
+Email :&nbsp;<input type="text" id="Email" placeholder="praveenvamsivasamsetti1607@gmail.com"><br><br>
+Age &nbsp;&nbsp;:&nbsp;<input type="text" id="Age" placeholder="18"><br><br>
+Gender :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Gender" value="male">Male 
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Gender" value="female">Female <br><br>
+phone no:&nbsp;<input type="text" id="Phone no" placeholder="6300435316"><br><br>
+Address :&nbsp;<input type="text" id="Address" placeholder="ravulapalem"><br><br>
+<br>
+ <br>
+ <br>
+<input  type="submit" name="submit" value="submit">
+</form>
+</div>
+</div>
+</body>
+</html>

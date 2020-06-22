@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function validate()
+{
+
+var age = document.getElementById("Age").value;
+var num = /^[0-9]+$/;
+
+if(!age.match("num"))
+{
+alert("age should be in numbers");
+return false;
+}
+
+alert("REGISTRATION SUCCESSFUL!!");
+return true;
+
+
+}
+
+
+</script>
+
+</head>
+<body>
+
+<form onsubmit="return validate()">
+
+Age :<input type="text" id="Age" placeholder="18"><br><br>
+
+<input  type="submit" name="submit" value="submit">
+
+</form>
+
+
+</body>
+</html>

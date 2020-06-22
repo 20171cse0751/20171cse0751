@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript">
+function getConformation(){
+var retval=confirm("do ypu want to continue");
+if(retval==true){
+document.write("user wants to continue");
+return true;
+}
+else{
+document.write("user doesnt want to continue");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="click me" onclick="getConformation#();" />
+</form>
+</body>
+</html>

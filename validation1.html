@@ -1,0 +1,146 @@
+<html>
+<head>
+<style>
+#di
+{
+margin:170px;
+background-color:red;
+color:blue;
+height:500px;
+width:400px;
+padding:50px;
+}
+body
+{
+background-image:linear-gradient(to right,white,skyblue);
+}
+</style>
+<script>
+
+function validate()
+{
+var name=document.forms["myform"]["name"].value;
+var mbn=document.forms["myform"]["mbn"].value;
+var branch=document.forms["myform"]["branch"].value;
+var sem=document.forms["myform"]["sem"].value;
+var etype=document.forms["myform"]["etype"];
+var ename=document.forms["myform"]["ename"].value;
+var grpnb=document.forms["myform"]["grpnb"].value;
+var name1=document.forms["myform"]["name1"].value;
+var name2=document.forms["myform"]["name2"].value;
+var name3=document.forms["myform"]["name3"].value;
+var name4=document.forms["myform"]["name4"].value;
+var regexpal=/^[a-zA-Z]+$/;
+if(name=="")
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(regexpal.test(name)==false)
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(mbn=="")
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(isNaN(mbn)==true)
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(mbn.length<10||mbn.length>10)
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(ename=="")
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(regexpal.test(ename)==false)
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(etype.selectedIndex<1)
+{
+alert("enter valid credentials");
+return false;
+}
+
+
+if(etype.selectedIndex==2)
+{
+document.getElementById.disabled=false;
+}
+
+if(sem.selectedIndex<1)
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(grpnb="")
+{
+alert("enter valid credentials");
+return false;
+}
+
+if(name1="" && name2="" && name3="" && name4="")
+{
+alert("enter valid credentials");
+return false;
+}
+document.write("reg success");
+}
+</script>
+</head>
+<body>
+<center>
+<div id="di">
+<form id="myform" onSubmit="return validate()" action="#" target="_self">
+Name: <input type="text" name="name"><br>
+mob number: <input type="text" name="mbn"><br>
+branch: <input type="radio" name="branch" value="cse" checked>cse
+<input type="radio" name="branch" value="ese">ece
+<input type="radio" name="branch" value="eee">eee
+<br>
+semester: <select name="sem">
+<option value="" selected></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option></select>
+<br>
+event type: <select name="etype">
+<option value="" selected></option>
+<option value="single">single</option>
+<option value="group">group</option>
+</select><br>
+group number: <input type="text" name="grpnb"><br><br>
+name 1: <input type="text" name="name1"><br><br>
+name 2: <input type="text" name="name2"><br><br>
+name 3: <input type="text" name="name3"><br><br>
+name 4: <input type="text" name="name4"><br><br>
+event name: <input type="text" name="ename"><br><br><br>
+<input type="submit" value="submit">
+</form>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function validate()
+{
+
+var name = document.getElementById('Name').value;
+var alpha = /^[a-zA-Z]+$/ ;
+
+var email = document.getElementById('Email').value;
+var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+var age=document.getElementById('Age').value;
+var num=/^[0-9]+$/;
+
+var gender= document.getElementsByName('Gender');
+
+var phno=document.getElementById('phoneno').value;
+
+var address=document.getElementById('Address').value;
+
+var Photo=document.getElementById("photo").value;
+
+var Signature=document.getElementById("signature").value;
+
+var Resume=document.getElementById("resume").value;
+
+var tenth1=document.getElementById("Tenth1").value;
+
+var puc1=document.getElementById("Puc1").value;
+
+var btech1=document.getElementById("Btech1").value;
+
+var tenth2=document.getElementById("Tenth2").value;
+
+var puc2=document.getElementById("Puc2").value;
+
+var btech2=document.getElementById("Btech2").value;
+
+var grade = /^[a-cA-C]+$/ ;
+
+var spe=document.getElementById('Spe').value;
+
+var dop=document.getElementById('Dop').value;
+
+var dob=document.getElementById('Dob').value;
+
+
+var tech= document.getElementsByName('Tech');
+
+if (name == "")
+{
+alert("Name cannot be empty");
+return false;
+}
+else
+if (name.length <= 5 )
+{
+alert("Name length should be greater than 5");
+Name.focus();
+return false;
+}
+
+else
+if (!name.match(alpha))
+{
+alert("Name cannot contain numbers");
+Name.focus();
+return false;
+}
+else
+if(email=="")
+{
+alert("email cannot be empty");
+return false;
+}
+
+else
+if(!email.match("mail"))
+{
+alert("invalied address");
+return false;
+}
+
+else
+if(age == "")
+{
+alert("Age cannot be empty");
+return false;
+}
+
+else
+if (age<15 || age>120)
+{
+alert("Age cannot be less than 15 or greater than 120");
+return false;
+}
+
+else
+if(!age.match(num))
+{
+alert("Age cannot be a alphabet");
+return false;
+}
+
+else
+if ((gender[0].checked == false) && (gender[1].checked == false))
+{
+alert("Gender cannot be empty");
+return false;
+}
+
+else
+if(phno == "")
+{
+alert("phone number cannot be empty");
+return false;
+}
+
+else
+if(phno.length != 10 )
+{
+alert("phone number length should be  10 digits");
+return false;
+}
+
+else
+if(!phno.match(num))
+{
+alert("phone number cannot be a alphabet");
+return false;
+}
+
+else
+if (address == "")
+{
+alert("address cannot be empty");
+return false;
+}
+
+else
+if(Photo== "")
+{
+alert("upload the file properly");
+return false;
+}
+
+else
+if(Signature== "")
+{
+alert("upload the signature file properly");
+return false;
+}
+else
+if(Resume== "")
+{
+alert("upload the resume file properly");
+return false;
+}
+
+
+
+else
+if(tenth1.length!=2)
+{
+alert(" tenth percentage should be two digits");
+return false;
+}
+else
+if(puc1.length!=2)
+{
+alert(" puc percentage should be two digits");
+return false;
+}
+else
+if(btech1.length!=2)
+{
+alert(" btech percentage should be two digits");
+return false;
+}
+
+else
+if(!tenth2.match(grade))
+{
+alert("choose  tenth grade from a,b,c ");
+return false;
+}
+
+else
+if(!puc2.match(grade))
+{
+alert(" choose puc grade from a,b,c");
+return false;
+}
+
+else
+if(!btech2.match(grade))
+{
+alert(" choose btech grade from a,b,c");
+return false;
+}
+
+else
+if(spe=="")
+{
+alert("choose the valied branch option");
+return false;
+}
+
+else
+if(dop=="")
+{
+alert("dop should not be empty");
+return false;
+}
+
+else
+if(dob=="")
+{
+alert("dop should not be empty");
+return false;
+}
+
+
+for (var i = 0; i < tech.length; i++) 
+{
+if (tech[i].checked) {
+       alert("REGISTRATION SUCCESSFUL!!");
+        return true;
+     }
+    else
+   {
+   alert("choose atleast one technical skill");
+    return false;
+}
+}
+
+
+alert("REGISTRATION SUCCESSFUL!!");
+return true;
+
+
+}
+
+
+</script>
+
+</head>
+<body>
+
+<form onsubmit="return validate()">
+Name : &nbsp;<input type="text" id="Name" placeholder="praveen"><br><br>
+Email : &nbsp;<input type="text" id="Email" placeholder="kijsljgvb@gmail.com"><br><br>
+Age : &nbsp;<input type="text" id="Age" placeholder="18"><br><br>
+Gender:<input type="radio" Name="Gender" value="male">Male <input type="radio" Name="Gender" value="female">Female<br><br>
+phone no :<input type="text" id="phoneno" placeholder="6300435316"><br><br>
+address:<input type="text" id="Address" ><br><br>
+
+
+upload Photo:<input type="file" id="photo" value="photo"><br><br>
+upload signature:<input type="file" id="signature"><br><br>
+upload resume:<input type="file" id="resume"><br><br>
+
+
+Tenth marks:<input type="text" id="Tenth1" placeholder="percentage"><input type="text" id="Tenth2" placeholder="cgpa"><br><br>
+PUC marks:<input type="text" id="Puc1" placeholder="percentage"><input type="text" id="Puc2" placeholder="cgpa"><br><br>
+BTECH marks:<input type="text" id="Btech1" placeholder="percentage"><input type="text" id="Btech2" placeholder="cgpa"><br><br>
+
+
+Specialiazation: <select id="Spe">
+<option value="" ></option>
+<option value="1">CSE</option>
+<option value="2">IT</option>
+<option value="3">ECE</option>
+<option value="4">EEE</option>
+<option value="5">CIVIL</option>
+<option value="6">MECHANICAL</option>
+</select>
+<br><br>
+
+DOP:<input type="date" id="Dop" min="2020-01-01" max="2022-12-30"><br><br>
+DOB:<input type="date" id="Dob"><br><br>
+<pre>
+Technical skills:
+                        <input type="checkbox"  name="Tech" >java
+                        <input type="checkbox"  name="Tech" >c++
+                        <input type="checkbox"  name="Tech" >c
+                        <input type="checkbox"  name="Tech" >DBMS
+</pre>
+<br><br>
+<input  type="submit" name="submit" value="submit">
+</form>
+
+
+</body>
+</html>
